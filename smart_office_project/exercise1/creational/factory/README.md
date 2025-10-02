@@ -1,0 +1,1 @@
+Factory demo: Vehicle creation.
