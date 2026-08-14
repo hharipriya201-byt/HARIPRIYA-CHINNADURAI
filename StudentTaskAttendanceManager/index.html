@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task & Attendance Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <h1>Student Dashboard</h1>
+    <p>Manage your attendance, subjects and daily tasks.</p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="stats">
+    <div class="stat-card">
+      <span>Overall Attendance</span>
+      <strong id="overallAttendance">0%</strong>
+    </div>
+    <div class="stat-card">
+      <span>Total Subjects</span>
+      <strong id="subjectCount">0</strong>
+    </div>
+    <div class="stat-card">
+      <span>Pending Tasks</span>
+      <strong id="pendingCount">0</strong>
+    </div>
+    <div class="stat-card">
+      <span>Completed Tasks</span>
+      <strong id="completedCount">0</strong>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="panel">
+      <h2>Add Subject</h2>
+      <form id="subjectForm">
+        <label>Subject Name
+          <input id="subjectName" type="text" placeholder="e.g. Java" required>
+        </label>
+        <label>Classes Attended
+          <input id="attended" type="number" min="0" value="0" required>
+        </label>
+        <label>Total Classes
+          <input id="totalClasses" type="number" min="1" value="1" required>
+        </label>
+        <button type="submit">Add Subject</button>
+      </form>
+    </div>
+
+    <div class="panel">
+      <h2>Add Task</h2>
+      <form id="taskForm">
+        <label>Task
+          <input id="taskName" type="text" placeholder="e.g. Complete assignment" required>
+        </label>
+        <label>Due Date
+          <input id="dueDate" type="date" required>
+        </label>
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="section-title">
+      <h2>Subjects & Attendance</h2>
+      <button id="clearSubjects" class="secondary">Clear Subjects</button>
+    </div>
+    <div id="subjects" class="subject-list"></div>
+    <p id="noSubjects" class="empty">No subjects added yet.</p>
+  </section>
+
+  <section class="panel">
+    <div class="section-title">
+      <h2>Tasks</h2>
+      <button id="clearTasks" class="secondary">Clear Tasks</button>
+    </div>
+    <div id="tasks"></div>
+    <p id="noTasks" class="empty">No tasks added yet.</p>
+  </section>
+</main>
+
+<footer>Student Task & Attendance Manager • HTML, CSS & JavaScript</footer>
+<script src="script.js"></script>
+</body>
+</html>
